@@ -5,7 +5,6 @@ import org.junit.Assert;
 import org.junit.Test;
 import org.junit.jupiter.api.DynamicTest;
 import org.junit.jupiter.api.function.Executable;
-import ru.socialquantum.common.utils.commonutils.CommonUtils;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -238,48 +237,47 @@ public class DynamicTestParamsCheck {
 
     }
 
-    @Test
-    public void testGroup20() {
-        List<Integer> integers = new ArrayList<>();
-        DynamicTestParams.ofType(Integer.class).params(1, 2, 3, 4, 5, 6).
-                testGroup("Test1", (s, i) -> s + i, test(i -> () -> integers.add(i)),i -> true).
-                testGroup("Test2", (s, i) -> s + i, test(i -> () -> integers.add(i * 2)), i -> true).
-                lock().form().forEachOrdered(dt -> CommonUtils.suppressAllWOResult(() -> dt.getExecutable().execute()));
-        Assert.assertEquals(
-                Arrays.asList(1, 2, 3, 4, 5, 6, 2, 4, 6, 8, 10, 12),
-                integers
-        );
+//    @Test
+//    public void testGroup20() {
+//        List<Integer> integers = new ArrayList<>();
+//        DynamicTestParams.ofType(Integer.class).params(1, 2, 3, 4, 5, 6).
+//                testGroup("Test1", (s, i) -> s + i, test(i -> () -> integers.add(i)),i -> true).
+//                testGroup("Test2", (s, i) -> s + i, test(i -> () -> integers.add(i * 2)), i -> true).
+//                lock().form().forEachOrdered(dt -> CommonUtils.suppressAllWOResult(() -> dt.getExecutable().execute()));
+//        Assert.assertEquals(
+//                Arrays.asList(1, 2, 3, 4, 5, 6, 2, 4, 6, 8, 10, 12),
+//                integers
+//        );
+//    }
 
-    }
-
-
-    @Test
-    public void testGroup30() {
-        List<Integer> integers = new ArrayList<>();
-        DynamicTestParams.ofType(Integer.class).params(1, 2, 3, 4, 5, 6).
-                testGroup("Test1", (s, i) -> s + i, test(i -> () -> integers.add(i)), i -> true).
-                testGroup("Test2", (s, i) -> s + i, test(i -> () -> integers.add(i * 2)), i -> true).
-                lock().form().forEachOrdered(dt -> CommonUtils.suppressAllWOResult(() -> dt.getExecutable().execute()));
-        Assert.assertEquals(
-                Arrays.asList(1, 2, 3, 4, 5, 6, 2, 4, 6, 8, 10, 12),
-                integers
-        );
-    }
+//
+//    @Test
+//    public void testGroup30() {
+//        List<Integer> integers = new ArrayList<>();
+//        DynamicTestParams.ofType(Integer.class).params(1, 2, 3, 4, 5, 6).
+//                testGroup("Test1", (s, i) -> s + i, test(i -> () -> integers.add(i)), i -> true).
+//                testGroup("Test2", (s, i) -> s + i, test(i -> () -> integers.add(i * 2)), i -> true).
+//                lock().form().forEachOrdered(dt -> CommonUtils.suppressAllWOResult(() -> dt.getExecutable().execute()));
+//        Assert.assertEquals(
+//                Arrays.asList(1, 2, 3, 4, 5, 6, 2, 4, 6, 8, 10, 12),
+//                integers
+//        );
+//    }
 
 /* ---------------------------------------------- copyParams ------------------------------------------------ */
 
-    @Test
-    public void copyParams10() {
-        List<Integer> integers = new ArrayList<>();
-        DynamicTestParams.ofType(Integer.class).params(1, 2, 3).
-                lock( ).
-                copyParams().params(4, 5, 6).
-                testGroup("Test1", (s, i) -> s + i, test(i -> () -> integers.add(i)), i -> true).lock().form().
-                map(DynamicTest::getExecutable).forEachOrdered(dt -> CommonUtils.suppressAllWOResult(dt::execute));
-
-        Assert.assertEquals(
-                Arrays.asList(1, 2, 3, 4, 5, 6),
-                integers
-        );
-    }
+//    @Test
+//    public void copyParams10() {
+//        List<Integer> integers = new ArrayList<>();
+//        DynamicTestParams.ofType(Integer.class).params(1, 2, 3).
+//                lock( ).
+//                copyParams().params(4, 5, 6).
+//                testGroup("Test1", (s, i) -> s + i, test(i -> () -> integers.add(i)), i -> true).lock().form().
+//                map(DynamicTest::getExecutable).forEachOrdered(dt -> CommonUtils.suppressAllWOResult(dt::execute));
+//
+//        Assert.assertEquals(
+//                Arrays.asList(1, 2, 3, 4, 5, 6),
+//                integers
+//        );
+//    }
 }
