@@ -11,8 +11,8 @@ import java.util.Arrays;
 import java.util.List;
 
 /**
+ *
  * @author Vladimir Bogodukhov
- * created on 21/10/16.
  */
 public class DynamicTestsNamesCheck {
     private static final List<Integer> VERSIONS = Arrays.asList(3, 4);

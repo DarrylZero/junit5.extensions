@@ -16,8 +16,6 @@ import org.junit.platform.launcher.core.LauncherDiscoveryRequestBuilder;
 import org.junit.platform.launcher.core.LauncherFactory;
 import com.steammachine.org.junit5.extensions.guice.res.error.ActionErrorTwoElementsAreAbsent;
 import com.steammachine.org.junit5.extensions.guice.res.error.ActionErrorTwoElementsArePresent;
-import ru.socialquantum.junit5.addons.guice.res.error.shareddata.*;
-import ru.socialquantum.junit5.addons.guice.res.normal.*;
 import com.steammachine.org.junit5.extensions.guice.res.normal.shareddata.ActionSharedDataNormalSecond;
 import com.steammachine.org.junit5.extensions.guice.res.normal.shareddata2.UnSharedDataFirst;
 

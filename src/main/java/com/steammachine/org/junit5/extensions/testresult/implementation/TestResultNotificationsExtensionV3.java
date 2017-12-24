@@ -1,4 +1,3 @@
-//package ru.socialquantum.junit5.addons.testresult.implementation;
 //
 //import org.junit.jupiter.api.extension.*;
 //import org.junit.platform.engine.TestExecutionResult;
@@ -7,7 +6,6 @@
 //import org.junit.platform.engine.support.descriptor.MethodSource;
 //import org.junit.platform.launcher.TestExecutionListener;
 //import org.junit.platform.launcher.TestIdentifier;
-//import ru.socialquantum.common.definitions.annotations.SignatureSensitive;
 //import ClassSourceWrapper;
 //import ReflectionsCall;
 //import ReflectionsCallsFactory;
@@ -29,9 +27,6 @@
 //
 //import static org.junit.platform.launcher.TestIdentifierHelper.updateIdentifierSource;
 //import static org.junit.platform.launcher.core.HackUtils.*;
-//import static ru.socialquantum.common.utils.commonutils.CommonUtils.intersectCollections;
-//import static ru.socialquantum.common.utils.commonutils.CommonUtils.suppress;
-//import static ReflectionsCallsFactory.*;
 //
 ///**
 // * Created 09/09/16 16:02

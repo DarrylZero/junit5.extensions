@@ -1,5 +1,3 @@
-//package ru.socialquantum.junit5.addons.testresult.implementation;
-//
 //import org.junit.jupiter.api.extension.*;
 //import org.junit.platform.engine.TestExecutionResult;
 //import org.junit.platform.engine.TestSource;
@@ -24,7 +22,6 @@
 //
 //import static org.junit.platform.launcher.TestIdentifierHelper.updateIdentifierSource;
 //import static org.junit.platform.launcher.core.HackUtils.*;
-//import static ru.socialquantum.common.utils.commonutils.CommonUtils.suppress;
 //
 ///**
 // * Created 14/07/17 16:02

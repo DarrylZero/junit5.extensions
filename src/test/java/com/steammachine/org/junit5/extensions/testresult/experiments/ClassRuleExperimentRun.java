@@ -4,7 +4,6 @@ import org.junit.*;
 import org.junit.rules.TestRule;
 import org.junit.rules.TestWatcher;
 import org.junit.runner.Description;
-import ru.socialquantum.common.utils.commonutils.CommonUtils;
 
 /**
  * Created 02/12/16 13:20

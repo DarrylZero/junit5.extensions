@@ -1,4 +1,4 @@
-package com.steammachine.org.junit5.extensions.expectedexceptions;//package ru.socialquantum.junit5.addons.expectedexceptions;
+//package com.steammachine.org.junit5.extensions.expectedexceptions;
 //
 //import org.junit.jupiter.api.extension.*;
 //import org.junit.platform.commons.util.AnnotationUtils;

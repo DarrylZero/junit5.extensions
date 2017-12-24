@@ -2,7 +2,6 @@
 //
 //import com.google.inject.Injector;
 //
-//import static ru.socialquantum.guice.injection.InjectionUtils.makeInjection;
 //
 ///**
 // * Created 08/08/17 14:31

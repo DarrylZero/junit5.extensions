@@ -4,7 +4,6 @@
 //import com.steammachine.org.junit5.extensions.testresult.implementation.MethodData;
 //import org.junit.jupiter.api.DynamicTest;
 //import org.junit.jupiter.api.function.Executable;
-//import ru.socialquantum.common.utils.commonutils.CommonUtils;
 //import com.steammachine.org.junit5.extensions.testresult.callbacks.CallBacksSingleton;
 //import com.steammachine.org.junit5.extensions.testresult.callbacks.DynamicTestCallBackKey;
 //
