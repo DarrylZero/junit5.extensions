@@ -4,7 +4,6 @@ package com.steammachine.org.junit5.extensions.ignore;
 import org.junit.jupiter.api.Test;
 
 /**
- * Created by vladimirbogoduhov on 30/09/16.
  *
  * @author Vladimir Bogodukhov
  */

@@ -5,7 +5,6 @@ import org.junit.Assert;
 import org.junit.Test;
 
 /**
- * Created by vladimirbogoduhov on 20/12/16.
  *
  * @author Vladimir Bogoduhov
  */

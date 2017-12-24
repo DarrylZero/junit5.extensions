@@ -6,8 +6,6 @@ import org.junit.Test;
 
 /**
  * @author Vladimir Bogodukhov
- *         <p>
- *         Created by vladimirbogoduhov on 21/12/16.
  */
 public class DynamicTestCallBackKeyCheck {
 

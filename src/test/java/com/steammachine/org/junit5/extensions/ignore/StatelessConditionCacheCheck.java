@@ -12,7 +12,6 @@
 //import static com.steammachine.org.junit5.extensions.ignore.StatelessConditionCacheCheck.StatelessConditionCacheImplHack.*;
 //
 ///**
-// * Created by vladimirbogoduhov on 30/09/16.
 // *
 // * @author Vladimir Bogodukhov
 // */

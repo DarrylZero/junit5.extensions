@@ -17,7 +17,6 @@
 //import static com.steammachine.org.junit5.extensions.ignore.IgnoreExtensionCheck.IgnoreExtensionHack.isStateless;
 //
 ///**
-// * Created by vladimirbogoduhov on 30/09/16.
 // *
 // * @author Vladimir Bogodukhov
 // */

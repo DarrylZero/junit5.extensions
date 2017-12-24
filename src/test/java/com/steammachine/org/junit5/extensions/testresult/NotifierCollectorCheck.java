@@ -11,7 +11,6 @@ import java.util.HashSet;
 import java.util.stream.Collectors;
 
 /**
- * Created by Vladimir Bogodukhov on 14/07/17.
  *
  * @author Vladimir Bogodukhov
  */

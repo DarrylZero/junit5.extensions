@@ -7,7 +7,6 @@ import org.junit.Test;
 import java.util.Arrays;
 
 /**
- * Created by vladimirbogoduhov on 27/09/16.
  *
  * @author Vladimir Bogodukhov
  */
