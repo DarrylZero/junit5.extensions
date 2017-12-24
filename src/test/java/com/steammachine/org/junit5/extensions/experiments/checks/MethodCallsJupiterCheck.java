@@ -11,10 +11,6 @@ import org.junit.platform.launcher.Launcher;
 import org.junit.platform.launcher.LauncherDiscoveryRequest;
 import org.junit.platform.launcher.core.LauncherDiscoveryRequestBuilder;
 import org.junit.platform.launcher.core.LauncherFactory;
-import ru.socialquantum.common.utils.commonutils.CommonUtils;
-import com.steammachine.org.junit5.extensions.common.DiscoverySelectorWrapper;
-import com.steammachine.org.junit5.extensions.testresult.TestResultNotification;
-import com.steammachine.org.junit5.extensions.testresult.dynamictestfactory.SignaledDynamicFactory;
 
 import java.io.FileNotFoundException;
 import java.io.IOException;

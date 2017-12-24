@@ -4,7 +4,6 @@ import com.steammachine.org.junit5.extensions.types.APILevel;
 import com.steammachine.org.junit5.extensions.types.Api;
 
 /**
- * Created 26/10/16 13:48
  *
  * @author Vladimir Bogodukhov
  **/

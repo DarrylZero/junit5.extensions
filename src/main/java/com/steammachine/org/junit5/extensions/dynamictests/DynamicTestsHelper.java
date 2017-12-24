@@ -7,7 +7,6 @@ import java.util.Iterator;
 import java.util.stream.Stream;
 
 /**
- * Created 21/10/16 15:46
  *
  * @author Vladimir Bogodukhov
  **/

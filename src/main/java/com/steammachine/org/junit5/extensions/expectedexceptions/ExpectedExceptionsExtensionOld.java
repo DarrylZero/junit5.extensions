@@ -15,7 +15,6 @@ package com.steammachine.org.junit5.extensions.expectedexceptions;//package ru.s
 //import java.util.stream.Stream;
 //
 ///**
-// * Created 26/09/16 18:17
 // *
 // * @author Vladimir Bogodukhov
 // **/

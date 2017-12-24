@@ -12,7 +12,6 @@ import java.util.Map;
 import java.util.Objects;
 
 /**
- * Created by Vladimir Bogodukhov on 06.04.16.
  *
  * @author Vladimir Bogodukhov
  *         <p>

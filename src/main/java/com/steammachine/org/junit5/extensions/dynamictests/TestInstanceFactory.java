@@ -5,7 +5,6 @@ import org.junit.jupiter.api.function.Executable;
 
 /**
  * Интерфейс фабрика получения объектов динамических тестов
- * Created 21/12/16 17:21
  * @author Vladimir Bogodukhov
  **/
 @FunctionalInterface

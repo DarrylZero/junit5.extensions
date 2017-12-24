@@ -7,7 +7,6 @@ import java.lang.reflect.Method;
 import java.util.Comparator;
 
 /**
- * Created 20/04/16 13:11
  *
  * @author Vladimir Bogodukhov
  **/

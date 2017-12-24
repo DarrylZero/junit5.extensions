@@ -4,7 +4,6 @@ import org.junit.jupiter.api.DynamicTest;
 import org.junit.jupiter.api.function.Executable;
 
 /**
- * Created 02/02/17 10:45
  *
  * @author Vladimir Bogodukhov
  **/

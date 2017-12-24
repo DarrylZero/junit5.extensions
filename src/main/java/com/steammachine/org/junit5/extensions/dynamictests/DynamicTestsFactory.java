@@ -7,7 +7,6 @@ package com.steammachine.org.junit5.extensions.dynamictests;
  * <p>
  * <p>
  * <p>
- * Created 20/10/16 16:46
  *
  * @author Vladimir Bogodukhov
  **/

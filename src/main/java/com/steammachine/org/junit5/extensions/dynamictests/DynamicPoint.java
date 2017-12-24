@@ -8,8 +8,6 @@ import java.util.Collection;
 /**
  * Точка, раздел или часть динамических тестов, задаваемых на основе методов.
  * <p>
- * Created 21/10/16 15:46
- *
  * @author Vladimir Bogodukhov
  **/
 public interface DynamicPoint {

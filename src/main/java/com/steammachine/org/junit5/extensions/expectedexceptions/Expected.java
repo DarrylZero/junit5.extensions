@@ -11,14 +11,14 @@ import java.lang.annotation.Target;
 
 /**
  * Аннотация тестовых методов Junit5 для пометки ожидаемых исключений.
- *
  * <p>
  * <p>
  * <p>
- * {@link Expected}
+ * <p>
+ * {@link com.steammachine.org.junit5.extensions.expectedexceptions.Expected}
+ * com.steammachine.org.junit5.extensions.expectedexceptions.Expected
  *
  * @author Vladimir Bogodukhov
- *         Created 26/09/16 18:19
  **/
 @Target({ElementType.METHOD})
 @Retention(RetentionPolicy.RUNTIME)
@@ -30,7 +30,6 @@ public @interface Expected {
     /**
      * Список классов ожидаемых исключений.
      *
-     *
      * @return Список классов ожидаемых исключений.
      */
     Class<? extends Throwable>[] expected() default {};
@@ -39,10 +38,9 @@ public @interface Expected {
      * Признак точного совпадения типа исключения.
      * в случае {@code true} ожидается, что тип исключения, выбрасываемого из метода теста
      * точно совпадает с одним из элементов {@link #expected()}
-     *
+     * <p>
      * в случае {@code false} ожидается что тип исключения, выбрасываемого из метода теста может быть
      * как либо одним из одним из элементов {@link #expected()} либо одним из наследников
-     *
      *
      * @return exact exception class match
      */
