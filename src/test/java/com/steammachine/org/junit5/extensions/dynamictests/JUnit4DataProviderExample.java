@@ -7,7 +7,6 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 
 /**
- * Created 25/10/16 14:27
  *
  * @author Vladimir Bogodukhov
  *         <p>

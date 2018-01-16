@@ -1,13 +1,16 @@
 package com.steammachine.org.junit5.extensions.testresult.callbacks;
 
+import com.steammachine.common.apilevel.Api;
+import com.steammachine.common.apilevel.State;
+
 /**
  * Вспомогательный интерфейс -  вызова
  * <p>
- * Created 20/12/16 10:53
  *
  * @author Vladimir Bogodukhov
  *         UNDER_CONSTRUCTION!!!
  **/
+@Api(value = State.INTERNAL)
 public interface Events {
 
     /**

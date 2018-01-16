@@ -6,7 +6,6 @@
 //import java.lang.annotation.*;
 //
 ///**
-// * Created 08/08/17 14:34
 // *
 // *
 // * Аннотация для Junit5

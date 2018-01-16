@@ -17,11 +17,10 @@
 //
 //
 ///**
-// * Created 09/09/16 16:02
 // *
 // * @author Vladimir Bogodukhov
 // **/
-//@Api(value = APILevel.internal)
+//@Api(value = State.INTERNAL)
 //public class IgnoreExtensionV3 implements ContainerExecutionCondition, TestExecutionCondition {
 //
 //    /**

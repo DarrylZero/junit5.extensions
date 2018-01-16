@@ -1,5 +1,7 @@
 //package com.steammachine.org.junit5.extensions.testresult.implementation;
 //
+//import com.steammachine.common.apilevel.Api;
+//import com.steammachine.common.apilevel.State;
 //import com.steammachine.org.junit5.extensions.common.ClassSourceWrapper;
 //import com.steammachine.org.junit5.extensions.testresult.NotifierCollector;
 //import com.steammachine.org.junit5.extensions.testresult.ReflectionsCall;
@@ -8,8 +10,6 @@
 //import com.steammachine.org.junit5.extensions.testresult.callbacks.CallBacks;
 //import com.steammachine.org.junit5.extensions.testresult.callbacks.CallBacksSingleton;
 //import com.steammachine.org.junit5.extensions.testresult.callbacks.DynamicTestCallBackKey;
-//import com.steammachine.org.junit5.extensions.types.APILevel;
-//import com.steammachine.org.junit5.extensions.types.Api;
 //import org.junit.jupiter.api.extension.BeforeAllCallback;
 //import org.junit.jupiter.api.extension.ConditionEvaluationResult;
 //import org.junit.jupiter.api.extension.ExecutionCondition;
@@ -33,11 +33,10 @@
 //import static org.junit.platform.launcher.core.HackUtils.hackTestExtensionContext;
 //
 ///**
-// * Created 14/07/17 16:02
 // *
 // * @author Vladimir Bogodukhov
 // **/
-//@Api(value = APILevel.internal)
+//@Api(value = State.INTERNAL)
 //public class TestResultNotificationsExtensionV5 implements ExecutionCondition, BeforeAllCallback {
 //
 //    public static final int VERSION = 4;

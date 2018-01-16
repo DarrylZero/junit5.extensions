@@ -7,7 +7,6 @@ import org.junit.jupiter.api.Test;
 import java.util.Random;
 
 /**
- * Created 27/09/16 08:05
  *
  * @author Vladimir Bogodukhov
  **/

@@ -7,7 +7,6 @@ import org.junit.jupiter.api.function.Executable;
 import java.lang.reflect.Method;
 
 /**
- * Created 20/12/16 11:04
  *
  * @author Vladimir Bogodukhov 
  **/

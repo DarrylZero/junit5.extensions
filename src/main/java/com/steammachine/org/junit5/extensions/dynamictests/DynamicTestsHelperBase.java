@@ -5,6 +5,8 @@ import com.steammachine.org.junit5.extensions.dynamictests.impls.ver4.DynamicTes
 /**
  *
  * @author Vladimir Bogodukhov
+ * {@link com.steammachine.org.junit5.extensions.dynamictests.DynamicTestsHelperBase}
+ * com.steammachine.org.junit5.extensions.dynamictests.DynamicTestsHelperBase
  **/
 public class DynamicTestsHelperBase extends DynamicTestsHelperVer4 {
 

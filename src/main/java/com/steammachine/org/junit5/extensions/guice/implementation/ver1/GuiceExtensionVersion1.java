@@ -4,7 +4,6 @@
 //
 //
 ///**
-// * Created 08/08/17 14:31
 // *
 // * @author Vladimir Bogodukhov
 // *

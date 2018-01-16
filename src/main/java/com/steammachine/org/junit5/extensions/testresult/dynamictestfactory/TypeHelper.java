@@ -1,7 +1,6 @@
 //package com.steammachine.org.junit5.extensions.testresult.dynamictestfactory;
 //
 ///**
-// * Created 20/12/16 14:28
 // *
 // * @author Vladimir Bogodukhov
 // **/

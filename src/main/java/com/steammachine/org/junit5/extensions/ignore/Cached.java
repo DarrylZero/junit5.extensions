@@ -1,7 +1,7 @@
 package com.steammachine.org.junit5.extensions.ignore;
 
-import com.steammachine.org.junit5.extensions.types.Api;
-import com.steammachine.org.junit5.extensions.types.APILevel;
+import com.steammachine.common.apilevel.Api;
+import com.steammachine.common.apilevel.State;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
@@ -23,13 +23,15 @@ import java.lang.annotation.Target;
  * Экземпляр такого класса не хранится в кэше и создается каждый раз.
  * <p>
  * <p>
- * Created 30/09/16 08:16
  *
  * @author Vladimir Bogodukhov
+ *
+ * {@link com.steammachine.org.junit5.extensions.ignore.Cached}
+ * com.steammachine.org.junit5.extensions.ignore.Cached
  **/
 @Target({ElementType.TYPE})
 @Retention(RetentionPolicy.RUNTIME)
-@Api(value = APILevel.experimental)
+@Api(value = State.EXPERIMENT)
 public @interface Cached {
 
     /**

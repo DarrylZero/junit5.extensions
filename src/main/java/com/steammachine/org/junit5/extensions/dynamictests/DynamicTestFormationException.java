@@ -5,6 +5,8 @@ package com.steammachine.org.junit5.extensions.dynamictests;
  * Исключение правильности построения динамических тестов.
  *
  * @author Vladimir Bogodukhov
+ * {@link com.steammachine.org.junit5.extensions.dynamictests.DynamicTestFormationException}
+ * com.steammachine.org.junit5.extensions.dynamictests.DynamicTestFormationException
  **/
 public class DynamicTestFormationException extends RuntimeException {
     public DynamicTestFormationException() {

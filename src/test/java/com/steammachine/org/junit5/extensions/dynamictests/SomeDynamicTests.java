@@ -9,7 +9,6 @@ import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 /**
- * Created 21/03/17 13:05
  *
  * @author Vladimir Bogodukhov
  **/

@@ -8,7 +8,6 @@ import org.junit.jupiter.api.TestFactory;
 import java.util.stream.Stream;
 
 /**
- * Created 25/10/16 14:27
  *
  * @author Vladimir Bogodukhov
  *         <p>

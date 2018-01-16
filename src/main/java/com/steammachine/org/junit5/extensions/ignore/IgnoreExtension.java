@@ -1,15 +1,18 @@
 package com.steammachine.org.junit5.extensions.ignore;
 
+import com.steammachine.common.apilevel.Api;
+import com.steammachine.common.apilevel.State;
 import com.steammachine.org.junit5.extensions.ignore.implementation.IgnoreExtensionV6;
-import com.steammachine.org.junit5.extensions.types.APILevel;
-import com.steammachine.org.junit5.extensions.types.Api;
 
 
 /**
- * Created 09/09/16 16:02
  *
  * @author Vladimir Bogodukhov
+ *
+ * {@link com.steammachine.org.junit5.extensions.ignore.IgnoreExtension}
+ * com.steammachine.org.junit5.extensions.ignore.IgnoreExtension
+ *
  **/
-//@Api(value = APILevel.internal) class IgnoreExtension extends IgnoreExtensionV3 {
-@Api(value = APILevel.internal) class IgnoreExtension extends IgnoreExtensionV6 {
+@Api(value = State.MAINTAINED)
+class IgnoreExtension extends IgnoreExtensionV6 {
 }

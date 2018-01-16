@@ -3,7 +3,6 @@
 //import org.junit.jupiter.api.function.Executable;
 //
 ///**
-// * Created 20/12/16 14:29
 // *
 // * @author Vladimir Bogodukhov
 // **/

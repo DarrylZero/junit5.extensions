@@ -2,7 +2,7 @@ package com.steammachine.org.junit5.extensions.guice.res.normal.shareddata.objec
 
 /**
  * @author Vladimir Bogodukhov
- *         Created 10/12/15 16:25
+ *
  */
 public interface RWSingletone {
     public static final RWSingletone NULL_OBJECT = new RWSingletone() {

@@ -1,20 +1,23 @@
 package com.steammachine.org.junit5.extensions.ignore;
 
-import com.steammachine.org.junit5.extensions.types.Api;
-import com.steammachine.org.junit5.extensions.types.APILevel;
+
+import com.steammachine.common.apilevel.Api;
+import com.steammachine.common.apilevel.State;
 
 /**
  * Дефолтная реализация условия фильтрации проигнорированных тестов с  предустановленными значением задаваемым в
  * конструкторе.
  *
  * <p>
- * Created 28/09/16 09:52
  *
  * @author Vladimir Bogodukhov
  * @see IgnoreCondition
+ *
+ * {@link com.steammachine.org.junit5.extensions.ignore.DefaultIgnoreCondition }
+ * com.steammachine.org.junit5.extensions.ignore.DefaultIgnoreCondition
+ *
  **/
-@SuppressWarnings("WeakerAccess")
-@Api(APILevel.stable)
+@Api(State.MAINTAINED)
 @Cached(true)
 public class DefaultIgnoreCondition implements IgnoreCondition  {
 

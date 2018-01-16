@@ -3,7 +3,6 @@
 //import com.google.inject.Module;
 //
 ///**
-//* Created 14/12/15 13:01
 //*
 //* @author Vladimir Bogodukhov
 //**/

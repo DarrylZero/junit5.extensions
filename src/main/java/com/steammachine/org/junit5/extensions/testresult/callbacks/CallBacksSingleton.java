@@ -1,7 +1,9 @@
 package com.steammachine.org.junit5.extensions.testresult.callbacks;
 
+import com.steammachine.common.apilevel.Api;
+import com.steammachine.common.apilevel.State;
+
 /**
- * Created 20/12/16 11:58
  * <p>
  * Синглтон - хранилище данных по обратным вызовам -
  * Не лучшее, но пока что единственное решение.
@@ -9,6 +11,8 @@ package com.steammachine.org.junit5.extensions.testresult.callbacks;
  * @author Vladimir Bogodukhov
  *         {@link CallBacksSingleton}
  **/
+@Api(State.INTERNAL)
+@Deprecated
 public class CallBacksSingleton {
 
     private static class HOLDER {

@@ -29,12 +29,11 @@
 //import static org.junit.platform.launcher.core.HackUtils.*;
 //
 ///**
-// * Created 09/09/16 16:02
 // *
 // * @author Vladimir Bogodukhov
 // *         UNDER_CONSTRUCTION!!!
 // **/
-//@Api(value = APILevel.internal)
+//@Api(value = State.EXPERIMENT)
 //public class TestResultNotificationsExtensionV3 implements
 //
 //        TestExecutionCondition,

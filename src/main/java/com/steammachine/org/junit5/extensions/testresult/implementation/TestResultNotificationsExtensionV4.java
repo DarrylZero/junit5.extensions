@@ -24,7 +24,6 @@
 //import static org.junit.platform.launcher.core.HackUtils.*;
 //
 ///**
-// * Created 14/07/17 16:02
 // *
 // * @author Vladimir Bogodukhov
 // **/

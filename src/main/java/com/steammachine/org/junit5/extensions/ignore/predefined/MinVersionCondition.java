@@ -5,7 +5,8 @@ import com.steammachine.org.junit5.extensions.ignore.predefined.implementation.M
 /**
  * Класс предок для условий игрнорирования тестов по минимальной версии.
  * @author Vladimir Bogodukhov
- *         {@link MinVersionCondition}
+ *         {@link com.steammachine.org.junit5.extensions.ignore.predefined.MinVersionCondition}
+ *         com.steammachine.org.junit5.extensions.ignore.predefined.MinVersionCondition
  **/
 public class MinVersionCondition extends MinVersionConditionVer1 {
 

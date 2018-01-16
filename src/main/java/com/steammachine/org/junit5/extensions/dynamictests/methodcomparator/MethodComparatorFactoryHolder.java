@@ -1,13 +1,13 @@
 package com.steammachine.org.junit5.extensions.dynamictests.methodcomparator;
 
-import com.steammachine.org.junit5.extensions.types.APILevel;
-import com.steammachine.org.junit5.extensions.types.Api;
+import com.steammachine.common.apilevel.Api;
+import com.steammachine.common.apilevel.State;
 
 /**
  *
  * @author Vladimir Bogodukhov
  **/
-@Api(APILevel.internal)
+@Api(State.INTERNAL)
 public class MethodComparatorFactoryHolder {
 
     private static class Holder {

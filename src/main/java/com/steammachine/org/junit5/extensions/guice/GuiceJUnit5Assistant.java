@@ -3,7 +3,6 @@
 //import com.steammachine.org.junit5.extensions.guice.implementation.ver1.GuiceJUnit5AssistantVersion1;
 //
 ///**
-// * Created 11/12/15 10:53
 // *
 // * @author Vladimir Bogodukhov
 // */

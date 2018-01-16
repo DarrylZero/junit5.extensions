@@ -31,24 +31,6 @@ auxprops.set('deploy') {
 group = deploy.group
 version = deploy.version
 
-//configurations {
-//    provided
-//}
-
-//sourceSets {
-//    main {
-//        compileClasspath += configurations.provided
-//    }
-//
-//    test {
-//        compileClasspath += configurations.provided
-//        runtimeClasspath += configurations.provided
-//    }
-//}
-
-//idea { module { scopes.PROVIDED.plus += [configurations.provided] } }
-
-
 jar {
     manifest {
         attributes(
@@ -63,13 +45,14 @@ jar {
 test { filter { includeTestsMatching "*Check" } }
 
 dependencies {
-    compile 'org.junit.platform:junit-platform-engine:1.0.0-M6'
-    compile 'org.junit.jupiter:junit-jupiter-api:5.0.0-M6'
-    compile 'org.junit.platform:junit-platform-launcher:1.0.0-M6'
+    compile 'org.junit.platform:junit-platform-engine:1.0.0'
+    compile 'org.junit.jupiter:junit-jupiter-api:5.0.0'
+    compile 'org.junit.platform:junit-platform-launcher:1.0.0'
+    compile 'com.steammachine.org:common.utils:1.0.0'
 
-    testCompile 'org.junit.jupiter:junit-jupiter-api:5.0.0-M6'
-    testRuntime 'org.junit.jupiter:junit-jupiter-engine:5.0.0-M6'
-    testRuntime 'org.junit.vintage:junit-vintage-engine:4.12.0-M6'
+    testCompile 'org.junit.jupiter:junit-jupiter-api:5.0.0'
+    testRuntime 'org.junit.jupiter:junit-jupiter-engine:5.0.0'
+    testRuntime 'org.junit.vintage:junit-vintage-engine:4.12.0'
 
     testCompile 'junit:junit:4.12'
     testCompile 'com.tngtech.java:junit-dataprovider:1.10.2'
@@ -120,3 +103,22 @@ publishing {
 }
 
 task buildandsources(dependsOn: [sourceJar, build]) {}
+
+/*
+task findbreaks(type: FileModifier) {
+    rule(FunctionSubstitution) {
+        find = '#BREAK'
+        operation = {
+            throw new IllegalStateException()
+        }
+    }
+}
+*/
+
+//git tag -a v1.4 -m 'my version 1.4'
+task tagCommandLine {
+    doLast {
+        println "git checkout release$deploy.version"
+        println "git tag -a v$deploy.version " + " -m \"version $deploy.version\""
+    }
+}

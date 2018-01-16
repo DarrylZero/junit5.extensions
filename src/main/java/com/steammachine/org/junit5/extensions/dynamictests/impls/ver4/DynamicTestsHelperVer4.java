@@ -16,7 +16,6 @@ import java.util.stream.Stream;
  * <p>
  * <p>
  * <p>
- * Created 20/10/16 16:46
  *
  * @author Vladimir Bogodukhov
  **/

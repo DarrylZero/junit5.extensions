@@ -16,7 +16,7 @@ public class MinVersionConditionCheck {
 
     @Test
     public void testName() {
-        Assert.assertEquals("MinVersionCondition",
+        Assert.assertEquals("com.steammachine.org.junit5.extensions.ignore.predefined.MinVersionCondition",
                 MinVersionCondition.class.getName());
     }
 

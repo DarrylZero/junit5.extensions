@@ -19,25 +19,25 @@ public class DynamicTestsNamesCheck {
 
     @Test
     public void testDynamicTestsFactoryName() {
-        Assert.assertEquals("DynamicTestsFactory",
+        Assert.assertEquals("com.steammachine.org.junit5.extensions.dynamictests.DynamicTestsFactory",
                 DynamicTestsFactory.class.getName());
     }
 
     @Test
     public void testDynamicTestsHelperName() {
-        Assert.assertEquals("DynamicTestsHelper",
+        Assert.assertEquals("com.steammachine.org.junit5.extensions.dynamictests.DynamicTestsHelper",
                 DynamicTestsHelper.class.getName());
     }
 
     @Test
     public void testDynamicTestsHelperBaseName() {
-        Assert.assertEquals("DynamicTestsHelperBase",
+        Assert.assertEquals("com.steammachine.org.junit5.extensions.dynamictests.DynamicTestsHelperBase",
                 DynamicTestsHelperBase.class.getName());
     }
 
     @Test
     public void testDynamicTestFormationExceptionName() {
-        Assert.assertEquals("DynamicTestFormationException",
+        Assert.assertEquals("com.steammachine.org.junit5.extensions.dynamictests.DynamicTestFormationException",
                 DynamicTestFormationException.class.getName());
     }
 

@@ -1,5 +1,8 @@
 package com.steammachine.org.junit5.extensions.testresult.callbacks;
 
+import com.steammachine.common.apilevel.Api;
+import com.steammachine.common.apilevel.State;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
@@ -8,13 +11,14 @@ import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.CopyOnWriteArrayList;
 
 /**
- * Created 19/12/16 11:58
  *
  * @author Vladimir Bogodukhov
  *         {@link CommonCallBacks}
  *
  *         UNDER_CONSTRUCTION
  **/
+@Api(State.INTERNAL)
+@Deprecated
 public class CommonCallBacks implements CallBacks, Events {
 
     private final Map<Object, List<CallBack<?>>> callBacks = new ConcurrentHashMap<>();

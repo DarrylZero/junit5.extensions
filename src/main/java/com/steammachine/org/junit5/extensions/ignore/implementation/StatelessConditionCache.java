@@ -1,9 +1,11 @@
 package com.steammachine.org.junit5.extensions.ignore.implementation;
 
+import com.steammachine.common.apilevel.Api;
+import com.steammachine.common.apilevel.State;
 import com.steammachine.org.junit5.extensions.ignore.Cached;
-import com.steammachine.org.junit5.extensions.types.Api;
+
 import com.steammachine.org.junit5.extensions.ignore.IgnoreCondition;
-import com.steammachine.org.junit5.extensions.types.APILevel;
+
 
 import java.util.function.Function;
 
@@ -13,10 +15,9 @@ import java.util.function.Function;
  * ({@link Cached}) классов
  * Объект выбирается из кэша по его классу и набору параметров.
  *
- * Created 30/09/16 08:27
  * @author Vladimir Bogodukhov
  **/
-@Api(value = APILevel.experimental)
+@Api(value = State.EXPERIMENT)
 public interface StatelessConditionCache {
 
     /**

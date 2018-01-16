@@ -10,22 +10,22 @@ import org.junit.jupiter.api.Test;
 public class IgnoreRun {
 
     @Test
-    @IgnoreJ5
+    @Ignore
     public void isStateless() {
     }
 
     @Test
-    @IgnoreJ5
+    @Ignore
     public void isStateless1() {
     }
 
     @Test
-    @IgnoreJ5
+    @Ignore
     public void isStateless2() {
     }
 
     @Test
-    @IgnoreJ5(condition = IgnoreCondition2345671.class)
+    @Ignore(condition = IgnoreCondition2345671.class)
     public void isStateless3() {
     }
 

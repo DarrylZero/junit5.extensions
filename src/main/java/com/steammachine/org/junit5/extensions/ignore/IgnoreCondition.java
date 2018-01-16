@@ -1,7 +1,8 @@
 package com.steammachine.org.junit5.extensions.ignore;
 
-import com.steammachine.org.junit5.extensions.types.APILevel;
-import com.steammachine.org.junit5.extensions.types.Api;
+
+import com.steammachine.common.apilevel.Api;
+import com.steammachine.common.apilevel.State;
 
 /**
  * Интерфейс условия фильтрации проигнорированных тестов.
@@ -9,11 +10,13 @@ import com.steammachine.org.junit5.extensions.types.Api;
  * <p>
  * <p>
  * Класс реализации должен иметь no-args конструктор
- * Created 28/09/16 09:52
  *
  * @author Vladimir Bogodukhov
+ *
+ * {@link com.steammachine.org.junit5.extensions.ignore.IgnoreCondition}
+ * com.steammachine.org.junit5.extensions.ignore.IgnoreCondition
  **/
-@Api(APILevel.stable)
+@Api(State.MAINTAINED)
 @FunctionalInterface
 public interface IgnoreCondition {
 

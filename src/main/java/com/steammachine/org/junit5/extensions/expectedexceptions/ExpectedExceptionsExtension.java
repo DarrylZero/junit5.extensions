@@ -1,10 +1,11 @@
 package com.steammachine.org.junit5.extensions.expectedexceptions;
 
-import com.steammachine.org.junit5.extensions.types.Api;
+import com.steammachine.common.apilevel.Api;
+import com.steammachine.common.apilevel.State;
 import org.junit.jupiter.api.extension.*;
 import org.junit.platform.commons.util.AnnotationUtils;
 import org.opentest4j.TestAbortedException;
-import com.steammachine.org.junit5.extensions.types.APILevel;
+
 
 import java.lang.reflect.AnnotatedElement;
 import java.util.Arrays;
@@ -18,7 +19,8 @@ import java.util.stream.Stream;
  *
  * @author Vladimir Bogodukhov
  **/
-@Api(APILevel.internal) class ExpectedExceptionsExtension
+@Api(State.INTERNAL)
+class ExpectedExceptionsExtension
         implements TestExecutionExceptionHandler, AfterTestExecutionCallback {
 
     private final ExtensionContext.Namespace extensionNameSpace =
@@ -59,7 +61,7 @@ import java.util.stream.Stream;
 
 /* ---------------------------------------------------- privates -------------------------------------------- */
 
-    @Api(APILevel.internal)
+    @Api(State.INTERNAL)
     private static Expected getExpected(ExtensionContext context) {
         Optional<AnnotatedElement> element = context.getElement();
         if (!element.isPresent()) {
@@ -85,7 +87,7 @@ import java.util.stream.Stream;
      *                       {@code false} -  проверяемый тип ошибки должен быть одним из предков
      * @return
      */
-    @Api(APILevel.internal)
+    @Api(State.INTERNAL)
     static boolean matches(
             Class<? extends Throwable> thr,
             List<Class<? extends Throwable>> exp,
@@ -103,7 +105,7 @@ import java.util.stream.Stream;
 
     }
 
-    @Api(APILevel.internal)
+    @Api(State.INTERNAL)
     private static boolean isRightClass(Class<? extends Throwable> thr,
                                         Class<? extends Throwable> exp,
                                         boolean matchExactType) {

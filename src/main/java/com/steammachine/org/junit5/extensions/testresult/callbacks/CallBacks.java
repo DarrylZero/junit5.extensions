@@ -1,12 +1,15 @@
 package com.steammachine.org.junit5.extensions.testresult.callbacks;
 
+import com.steammachine.common.apilevel.Api;
+import com.steammachine.common.apilevel.State;
+
 /**
  * Интерфейс регистрации
- * Created 20/12/16 10:15
  *
  * @author Vladimir Bogodukhov
  *         UNDER_CONSTRUCTION!!!
  **/
+@Api(State.INTERNAL)
 public interface CallBacks {
 
     /**

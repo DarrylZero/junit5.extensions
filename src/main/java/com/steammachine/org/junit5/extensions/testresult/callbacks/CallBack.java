@@ -1,14 +1,17 @@
 package com.steammachine.org.junit5.extensions.testresult.callbacks;
 
+import com.steammachine.common.apilevel.Api;
+import com.steammachine.common.apilevel.State;
+
 /**
  *
  * Вспомогательный интерфейс обратного вызова
  *
- * Created 19/12/16 13:33
  * @author Vladimir Bogodukhov
  *
  *  UNDER_CONSTRUCTION!!!
  **/
+@Api(State.INTERNAL)
 public interface CallBack<T> {
 
     /**

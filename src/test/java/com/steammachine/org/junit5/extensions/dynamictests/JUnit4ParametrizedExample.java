@@ -8,7 +8,6 @@ import java.util.Arrays;
 import java.util.Collection;
 
 /**
- * Created 20/10/16 16:51
  *
  * @author Vladimir Bogodukhov
  *         #EXAMPLE

@@ -9,6 +9,9 @@ package com.steammachine.org.junit5.extensions.dynamictests;
  * <p>
  *
  * @author Vladimir Bogodukhov
+ *
+ * {@link com.steammachine.org.junit5.extensions.dynamictests.DynamicTestsFactory}
+ * com.steammachine.org.junit5.extensions.dynamictests.DynamicTestsFactory
  **/
 public class DynamicTestsFactory {
 

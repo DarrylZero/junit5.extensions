@@ -6,7 +6,6 @@ import org.junit.rules.TestWatcher;
 import org.junit.runner.Description;
 
 /**
- * Created 02/12/16 13:20
  *
  * @author Vladimir Bogodukhov
  **/

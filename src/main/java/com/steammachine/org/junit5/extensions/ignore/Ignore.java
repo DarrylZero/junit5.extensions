@@ -1,8 +1,9 @@
 package com.steammachine.org.junit5.extensions.ignore;
 
-import com.steammachine.org.junit5.extensions.types.Api;
+
+import com.steammachine.common.apilevel.Api;
+import com.steammachine.common.apilevel.State;
 import org.junit.jupiter.api.extension.ExtendWith;
-import com.steammachine.org.junit5.extensions.types.APILevel;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
@@ -13,15 +14,16 @@ import java.lang.annotation.Target;
  * Аннотация для временного отключения теста. (junit5)
  * Тестовый класс или тестовый метод помеченный такой аннотацией исключается из прогона.
  * Аннотация предоставляет полную поддержку поведения Ignore для junit4 с дополнительными свойствами.
- * Created 09/09/16 16:00
  *
  * @author Vladimir Bogodukhov
+ *
+ * {@link com.steammachine.org.junit5.extensions.ignore.Ignore}
  **/
 @Target({ElementType.TYPE, ElementType.METHOD})
 @Retention(RetentionPolicy.RUNTIME)
 @ExtendWith(IgnoreExtension.class)
-@Api(value = APILevel.stable)
-public @interface IgnoreJ5 {
+@Api(value = State.MAINTAINED)
+public @interface Ignore {
 
 
     /**

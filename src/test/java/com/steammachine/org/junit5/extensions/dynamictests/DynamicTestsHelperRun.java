@@ -4,9 +4,10 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import org.junit.platform.engine.TestExecutionResult;
+import org.junit.platform.engine.discovery.DiscoverySelectors;
+import org.junit.platform.launcher.*;
 import org.junit.platform.launcher.core.LauncherDiscoveryRequestBuilder;
 import org.junit.platform.launcher.core.LauncherFactory;
-import com.steammachine.org.junit5.extensions.common.DiscoverySelectorWrapper;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -51,7 +52,7 @@ public class DynamicTestsHelperRun {
 
 
         final LauncherDiscoveryRequestBuilder builder = LauncherDiscoveryRequestBuilder.request();
-        builder.selectors(DiscoverySelectorWrapper.selectClass(JUnit4ParametrizedExample.class));
+        builder.selectors(DiscoverySelectors.selectClass(JUnit4ParametrizedExample.class));
         LauncherDiscoveryRequest discoveryRequest = builder.build();
 
         TestPlan discover = launcher.discover(discoveryRequest);
@@ -96,7 +97,7 @@ public class DynamicTestsHelperRun {
         });
 
         final LauncherDiscoveryRequestBuilder builder = LauncherDiscoveryRequestBuilder.request();
-        builder.selectors(DiscoverySelectorWrapper.selectMethod(JUnit4ParametrizedExample.class.getName(), "test1"));
+        builder.selectors(DiscoverySelectors.selectMethod(JUnit4ParametrizedExample.class.getName(), "test1"));
         LauncherDiscoveryRequest discoveryRequest = builder.build();
 
         TestPlan discover = launcher.discover(discoveryRequest);
@@ -147,9 +148,7 @@ public class DynamicTestsHelperRun {
 
         final LauncherDiscoveryRequestBuilder builder = LauncherDiscoveryRequestBuilder.request();
 
-
-
-        builder.selectors(DiscoverySelectorWrapper.selectMethod(JUnit4ParametrizedExample.class.getName(),
+        builder.selectors(DiscoverySelectors.selectMethod(JUnit4ParametrizedExample.class.getName(),
                 JUnit4ParametrizedExample.class.getMethod("test1").getName()));
 
         LauncherDiscoveryRequest discoveryRequest = builder.build();

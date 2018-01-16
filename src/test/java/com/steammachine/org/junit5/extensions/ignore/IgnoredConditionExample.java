@@ -3,7 +3,6 @@ package com.steammachine.org.junit5.extensions.ignore;
 import org.junit.jupiter.api.Test;
 
 /**
- * Created 25/10/16 12:58
  *
  * @author Vladimir Bogodukhov
  **/
@@ -13,7 +12,7 @@ public class IgnoredConditionExample {
     }
 
     @Test
-    @IgnoreJ5(condition = IgnEx.class)
+    @Ignore(condition = IgnEx.class)
     void test() {
     }
 
@@ -21,7 +20,7 @@ public class IgnoredConditionExample {
     }
 
     @Test
-    @IgnoreJ5(condition = IgnEx2.class)
+    @Ignore(condition = IgnEx2.class)
     void test2() {
     }
 
@@ -29,7 +28,7 @@ public class IgnoredConditionExample {
     }
 
     @Test
-    @IgnoreJ5(condition = IgnEx3.class)
+    @Ignore(condition = IgnEx3.class)
     void test3() {
     }
 
@@ -39,7 +38,7 @@ public class IgnoredConditionExample {
     }
 
     @Test
-    @IgnoreJ5(condition = IgnEx4.class)
+    @Ignore(condition = IgnEx4.class)
     void test4() {
     }
 
@@ -47,7 +46,7 @@ public class IgnoredConditionExample {
     }
 
     @Test
-    @IgnoreJ5(condition = IgnEx5.class)
+    @Ignore(condition = IgnEx5.class)
     void test5() {
     }
 
@@ -55,7 +54,7 @@ public class IgnoredConditionExample {
     }
 
     @Test
-    @IgnoreJ5(condition = IgnEx6.class)
+    @Ignore(condition = IgnEx6.class)
     void test6() {
     }
 
@@ -63,7 +62,7 @@ public class IgnoredConditionExample {
     }
 
     @Test
-    @IgnoreJ5(condition = IgnEx7.class)
+    @Ignore(condition = IgnEx7.class)
     void test7() {
     }
 
@@ -71,12 +70,12 @@ public class IgnoredConditionExample {
     }
 
     @Test
-    @IgnoreJ5(condition = IgnEx8.class)
+    @Ignore(condition = IgnEx8.class)
     void test8() {
     }
 
     @Test
-    @IgnoreJ5(condition = IgnoreCondition2345671.class)
+    @Ignore(condition = IgnoreCondition2345671.class)
     void test9() {
     }
 

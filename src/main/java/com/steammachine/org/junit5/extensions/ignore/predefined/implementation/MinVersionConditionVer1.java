@@ -4,7 +4,6 @@ import com.steammachine.org.junit5.extensions.ignore.Cached;
 import com.steammachine.org.junit5.extensions.ignore.IgnoreCondition;
 
 /**
- * Created 24/11/16 12:36
  *
  * @author Vladimir Bogodukhov
  **/

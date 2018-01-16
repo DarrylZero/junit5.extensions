@@ -9,6 +9,8 @@ import java.util.stream.Stream;
 /**
  *
  * @author Vladimir Bogodukhov
+ *
+ * {@link com.steammachine.org.junit5.extensions.dynamictests.DynamicTestsHelper}
  **/
 public interface DynamicTestsHelper {
 

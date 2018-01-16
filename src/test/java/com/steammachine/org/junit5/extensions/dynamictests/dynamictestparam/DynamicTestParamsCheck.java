@@ -1,6 +1,5 @@
 package com.steammachine.org.junit5.extensions.dynamictests.dynamictestparam;
 
-import com.steammachine.org.junit5.extensions.dynamictests.dynamictestparam.DynamicTestParams;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.jupiter.api.DynamicTest;
@@ -23,7 +22,6 @@ import static com.steammachine.org.junit5.extensions.dynamictests.dynamictestpar
  * {@link DynamicTestParams#dynamicTests(Function, Function, BiFunction, Predicate)}
  * {@link DynamicTestParams#lock()}
  * <p>
- * Created by Vladimir Bogodukhov 10/02/17 11:17
  *
  * @author Vladimir Bogodukhov
  */
@@ -42,7 +40,7 @@ public class DynamicTestParamsCheck {
 
     @Test
     public void testFullName() {
-        Assert.assertEquals("DynamicTestParams",
+        Assert.assertEquals("com.steammachine.org.junit5.extensions.dynamictests.dynamictestparam.DynamicTestParams",
                 DynamicTestParams.class.getName());
     }
 

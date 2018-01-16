@@ -12,7 +12,6 @@
 //import java.util.function.Function;
 //
 ///**
-// * Created 19/12/16 11:45
 // *
 // * @author Vladimir Bogodukhov
 // *

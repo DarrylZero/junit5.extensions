@@ -4,15 +4,12 @@ import org.junit.jupiter.api.Assumptions;
 import org.opentest4j.TestAbortedException;
 
 /**
- * Created 19/10/16 14:12
  *
  * @author Vladimir Bogodukhov
- * {@link SkipperJUnit5}
+ * {@link com.steammachine.org.junit5.extensions.testskipper.SkipperJUnit5}
+ * com.steammachine.org.junit5.extensions.testskipper.SkipperJUnit5
  **/
 public class SkipperJUnit5 {
-
-
-
 
 
     /**

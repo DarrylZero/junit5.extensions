@@ -2,24 +2,22 @@ package com.steammachine.org.junit5.extensions.expectedexceptions;
 
 import org.junit.Assert;
 import org.junit.Test;
+import org.junit.platform.engine.DiscoverySelector;
 import org.junit.platform.engine.TestExecutionResult;
+import org.junit.platform.engine.discovery.DiscoverySelectors;
+import org.junit.platform.engine.support.descriptor.MethodSource;
 import org.junit.platform.launcher.Launcher;
 import org.junit.platform.launcher.LauncherDiscoveryRequest;
 import org.junit.platform.launcher.TestExecutionListener;
 import org.junit.platform.launcher.TestIdentifier;
 import org.junit.platform.launcher.core.LauncherDiscoveryRequestBuilder;
 import org.junit.platform.launcher.core.LauncherFactory;
-import com.steammachine.org.junit5.extensions.common.DiscoverySelectorWrapper;
-import com.steammachine.org.junit5.extensions.common.JUnit5VersionsUtils;
-import com.steammachine.org.junit5.extensions.common.MethodSourceWrapper;
 
 import java.util.HashMap;
 import java.util.Map;
 
-import static com.steammachine.org.junit5.extensions.common.MethodSourceWrapper.isMethodSource;
 
 /**
- * Created 27/09/16 08:05
  *
  * @author Vladimir Bogodukhov
  **/
@@ -27,13 +25,13 @@ public class ExpectedCheck {
 
     @Test
     public void testName() {
-        Assert.assertEquals("Expected",
+        Assert.assertEquals("com.steammachine.org.junit5.extensions.expectedexceptions.Expected",
                 Expected.class.getName());
     }
 
     @Test
     public void testExpectedJupiterRunName() {
-        Assert.assertEquals("ExpectedJupiterRun",
+        Assert.assertEquals("com.steammachine.org.junit5.extensions.expectedexceptions.ExpectedJupiterRun",
                 ExpectedJupiterRun.class.getName());
     }
 
@@ -49,8 +47,8 @@ public class ExpectedCheck {
                 if (testIdentifier.isTest() && testIdentifier.getSource().isPresent()
                         && isMethodSource(testIdentifier.getSource().get().getClass())) {
 
-                    MethodSourceWrapper wrapper = new MethodSourceWrapper(testIdentifier.getSource().get());
-                    String key = wrapper.className() + "." + wrapper.methodName() + "()";
+                    MethodSource wrapper = MethodSource.class.cast(testIdentifier.getSource().get());
+                    String key = wrapper.getClassName() + "." + wrapper.getMethodName() + "()";
                     map.put(key, testExecutionResult.getStatus());
                 }
             }
@@ -59,7 +57,7 @@ public class ExpectedCheck {
 
         launcher.execute(
                 LauncherDiscoveryRequestBuilder.request().
-                        selectors(DiscoverySelectorWrapper.selectClass(ExpectedJupiterRun.class)).build());
+                        selectors(DiscoverySelectors.selectClass(ExpectedJupiterRun.class)).build());
 
         Assert.assertEquals(new HashMap<String, TestExecutionResult.Status>() {
             {
@@ -88,16 +86,15 @@ public class ExpectedCheck {
                 if (testIdentifier.isTest() && testIdentifier.getSource().isPresent()
                         && isMethodSource(testIdentifier.getSource().get().getClass())) {
 
-                    MethodSourceWrapper wrapper = new MethodSourceWrapper(testIdentifier.getSource().get());
-                    String key = wrapper.className() + "." + wrapper.methodName() + "()";
+                    MethodSource wrapper = (MethodSource) testIdentifier.getSource().get();
+                    String key = wrapper.getClassName() + "." + wrapper.getMethodName() + "()";
                     map.put(key, testExecutionResult.getStatus());
                 }
             }
         });
 
         LauncherDiscoveryRequest request = LauncherDiscoveryRequestBuilder.request().
-                selectors(JUnit5VersionsUtils.selectClass(ExpectedVintageRun.class)).build();
-/*selectors(DiscoverySelectorWrapper.selectClass(ExpectedVintageRun.class)).build());*/
+                selectors(DiscoverySelectors.selectClass(ExpectedVintageRun.class)).build();
         launcher.execute(request);
 
         Assert.assertEquals(new HashMap<String, TestExecutionResult.Status>() {
@@ -111,6 +108,10 @@ public class ExpectedCheck {
         }, map);
 
 
+    }
+
+    private static boolean isMethodSource(Class<?> clazz) {
+        return clazz.isAssignableFrom(MethodSource.class);
     }
 
 }

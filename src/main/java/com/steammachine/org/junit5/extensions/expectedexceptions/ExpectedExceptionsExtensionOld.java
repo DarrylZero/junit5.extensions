@@ -18,7 +18,8 @@
 // *
 // * @author Vladimir Bogodukhov
 // **/
-//@Api(APILevel.internal) class ExpectedExceptionsExtension
+//@Api(State.INTERNAL)
+//class ExpectedExceptionsExtension
 //        implements TestExecutionExceptionHandler, AfterTestExecutionCallback {
 //
 //    private final ExtensionContext.Namespace extensionNameSpace =
@@ -60,7 +61,7 @@
 //
 ///* ---------------------------------------------------- privates -------------------------------------------- */
 //
-//    @Api(APILevel.internal)
+//    @Api(value = State.INTERNAL)
 //    private static Expected getExpected(TestExtensionContext context) {
 //        Optional<AnnotatedElement> element = context.getElement();
 //        if (!element.isPresent()) {
@@ -86,7 +87,7 @@
 //     *                       {@code false} -  проверяемый тип ошибки должен быть одним из предков
 //     * @return
 //     */
-//    @Api(APILevel.internal)
+//    @Api(value = State.INTERNAL)
 //    static boolean matches(
 //            Class<? extends Throwable> thr,
 //            List<Class<? extends Throwable>> exp,
@@ -104,7 +105,7 @@
 //
 //    }
 //
-//    @Api(APILevel.internal)
+//    @Api(value = State.INTERNAL)
 //    private static boolean isRightClass(Class<? extends Throwable> thr,
 //                                        Class<? extends Throwable> exp,
 //                                        boolean matchExactType) {

@@ -1,7 +1,6 @@
 package com.steammachine.org.junit5.extensions.ignore;
 
 /**
- * Created 15/11/16 18:16
  *
  * @author Vladimir Bogodukhov 
  **/

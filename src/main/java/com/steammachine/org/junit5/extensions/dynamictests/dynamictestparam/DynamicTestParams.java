@@ -1,5 +1,7 @@
 package com.steammachine.org.junit5.extensions.dynamictests.dynamictestparam;
 
+import com.steammachine.common.apilevel.Api;
+import com.steammachine.common.apilevel.State;
 import org.junit.jupiter.api.DynamicTest;
 import org.junit.jupiter.api.function.Executable;
 
@@ -20,13 +22,14 @@ import java.util.stream.Stream;
  *
  * @author Vladimir Bogodukhov
  *         <p>
- *         {@link DynamicTestParams}
+ *         {@link com.steammachine.org.junit5.extensions.dynamictests.dynamictestparam.DynamicTestParams}
  *         <p>
  *         <p>
  *         <a href="https://stackoverflow.com/questions/29216588/how-to-ensure-order-of-processing-in-java8-streams"> информация о порядке следования элементов </a>
  *         <a href="https://docs.oracle.com/javase/8/docs/api/java/util/stream/package-summary.html#Ordering"> информация о порядке следования элементов </a>
  *         <a href="https://ru.wikipedia.org/wiki/%D0%98%D0%B4%D0%B5%D0%BC%D0%BF%D0%BE%D1%82%D0%B5%D0%BD%D1%82%D0%BD%D0%BE%D1%81%D1%82%D1%8C> идемпотентная функция </a>
  **/
+@Api(State.INCUBATING)
 public class DynamicTestParams<T> {
 
     private static final class TestGroup<Type> {

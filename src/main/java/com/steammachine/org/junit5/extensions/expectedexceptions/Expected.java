@@ -1,7 +1,7 @@
 package com.steammachine.org.junit5.extensions.expectedexceptions;
 
-import com.steammachine.org.junit5.extensions.types.APILevel;
-import com.steammachine.org.junit5.extensions.types.Api;
+import com.steammachine.common.apilevel.Api;
+import com.steammachine.common.apilevel.State;
 import org.junit.jupiter.api.extension.ExtendWith;
 
 import java.lang.annotation.ElementType;
@@ -23,7 +23,7 @@ import java.lang.annotation.Target;
 @Target({ElementType.METHOD})
 @Retention(RetentionPolicy.RUNTIME)
 @ExtendWith(ExpectedExceptionsExtension.class)
-@Api(APILevel.stable)
+@Api(State.MAINTAINED)
 public @interface Expected {
 
 
