@@ -15,6 +15,9 @@ package com.steammachine.org.junit5.extensions.dynamictests;
  **/
 public class DynamicTestsFactory {
 
+    private DynamicTestsFactory() {
+    }
+
     /**
      * Получить новый экземпляр хелпера - построителя
      *

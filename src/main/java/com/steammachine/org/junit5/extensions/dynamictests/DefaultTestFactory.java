@@ -8,6 +8,9 @@ import org.junit.jupiter.api.DynamicTest;
  **/
 public class DefaultTestFactory {
 
+    private DefaultTestFactory() {
+    }
+
     public static final TestInstanceFactory DEFAULT_FACTORY = DynamicTest::dynamicTest;
 
 }

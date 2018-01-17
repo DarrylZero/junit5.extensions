@@ -2,10 +2,11 @@ package com.steammachine.org.junit5.extensions.expectedexceptions;
 
 import com.steammachine.common.apilevel.Api;
 import com.steammachine.common.apilevel.State;
-import org.junit.jupiter.api.extension.*;
+import org.junit.jupiter.api.extension.AfterTestExecutionCallback;
+import org.junit.jupiter.api.extension.ExtensionContext;
+import org.junit.jupiter.api.extension.NamespaceFactory;
+import org.junit.jupiter.api.extension.TestExecutionExceptionHandler;
 import org.junit.platform.commons.util.AnnotationUtils;
-import org.opentest4j.TestAbortedException;
-
 
 import java.lang.reflect.AnnotatedElement;
 import java.util.Arrays;
@@ -16,7 +17,6 @@ import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 /**
- *
  * @author Vladimir Bogodukhov
  **/
 @Api(State.INTERNAL)
@@ -32,8 +32,9 @@ class ExpectedExceptionsExtension
         if (getExpected(context) == null) {
             return;
         }
-        /* Тут подавляются все исключения. которые возникают в процесе вызоыва тестируемого метода */
-        context.getStore(extensionNameSpace).put(context.getTestMethod().get(), throwable);
+
+        /* Тут подавляются все исключения. которые возникают в процесе вызова тестируемого метода */
+        context.getStore(extensionNameSpace).put(context.getTestMethod().orElseThrow(IllegalStateException::new), throwable);
     }
 
     @Override
@@ -42,8 +43,8 @@ class ExpectedExceptionsExtension
         if (expected == null) {
             return;
         }
-
-        Throwable throwable = (Throwable) context.getStore(extensionNameSpace).remove(context.getTestMethod().get());
+        Throwable throwable = (Throwable) context.getStore(extensionNameSpace).remove(context.getTestMethod().
+                orElseThrow(IllegalStateException::new));
         Class<? extends Throwable> throwableClass = throwable == null ? null : throwable.getClass();
         if (matches(throwableClass, Arrays.asList(expected.expected()), expected.matchExactType())) {
             /* тест выплнен с ошибкой - исключение брошено внутри теста, но оно ожидается  */
@@ -67,13 +68,12 @@ class ExpectedExceptionsExtension
         if (!element.isPresent()) {
             return null;
         }
-        Optional<Expected> opAnnotation = AnnotationUtils.findAnnotation(element, Expected.class);
-        if (!opAnnotation.isPresent()) {
-            return null;
-        }
         /*  ------------- до этой точки аннотации нет ------------- */
+
+        Optional<Expected> opAnnotation = AnnotationUtils.findAnnotation(element, Expected.class);
+
         /* исключение БРОШЕНО */
-        return opAnnotation.get();
+        return opAnnotation.orElse(null);
     }
 
 
@@ -99,7 +99,7 @@ class ExpectedExceptionsExtension
             return exp.isEmpty();
         } else {
             return exp.stream().map(Objects::requireNonNull).collect(Collectors.toSet()).
-                    stream().anyMatch((i) -> isRightClass(thr, i, matchExactType));
+                    stream().anyMatch(i -> isRightClass(thr, i, matchExactType));
         }
 
 

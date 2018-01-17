@@ -32,17 +32,17 @@ import java.util.stream.Stream;
 @Api(State.INCUBATING)
 public class DynamicTestParams<T> {
 
-    private static final class TestGroup<Type> {
+    private static final class TestGroup<G> {
         private final String groupName;
-        private final BiFunction<String, Type, String> nameFactory;
-        private final BiFunction<String, Type, DynamicTest> executableFactory;
-        private final Predicate<Type> paramFilter;
+        private final BiFunction<String, G, String> nameFactory;
+        private final BiFunction<String, G, DynamicTest> executableFactory;
+        private final Predicate<G> paramFilter;
 
         private TestGroup(
                 String groupName,
-                BiFunction<String, Type, String> nameFactory,
-                BiFunction<String, Type, DynamicTest> executableFactory,
-                Predicate<Type> paramFilter) {
+                BiFunction<String, G, String> nameFactory,
+                BiFunction<String, G, DynamicTest> executableFactory,
+                Predicate<G> paramFilter) {
             this.groupName = Objects.requireNonNull(groupName);
             this.nameFactory = Objects.requireNonNull(nameFactory);
             this.executableFactory = Objects.requireNonNull(executableFactory);
@@ -53,15 +53,15 @@ public class DynamicTestParams<T> {
             return groupName;
         }
 
-        public BiFunction<String, Type, String> nameFactory() {
+        public BiFunction<String, G, String> nameFactory() {
             return nameFactory;
         }
 
-        public BiFunction<String, Type, DynamicTest> executableFactory() {
+        public BiFunction<String, G, DynamicTest> executableFactory() {
             return executableFactory;
         }
 
-        public Predicate<Type> paramFilter() {
+        public Predicate<G> paramFilter() {
             return paramFilter;
         }
     }
@@ -233,7 +233,7 @@ public class DynamicTestParams<T> {
      * @param testFactory       фабрика тестов (Всегда не null)
      * @param paramFilter       Фильтр для параметров (Всегда не null)
      * @return стрим с тестами, построенными на переданных параметрах. (Всегда не null)
-     * Deprecated  Использовать {@link #testGroup} и {@link #form()}
+     * @deprecated  Использовать {@link #testGroup} и {@link #form()}
      */
     @Deprecated
     public Stream<DynamicTest> dynamicTests(
@@ -259,7 +259,7 @@ public class DynamicTestParams<T> {
      * @param function  - метод преобразования из параметра в динамический тест (Всегда не null)
      * @param predicate - Фильтр для параметров
      * @return стрим с тестами, построенными на переданных параметрах. (Всегда не null)
-     * Deprecated  Использовать {@link #testGroup} и {@link #form()}
+     * @deprecated  Использовать {@link #testGroup} и {@link #form()}
      */
     @Deprecated
     public Stream<DynamicTest> dynamicTests(Function<T, DynamicTest> function, Predicate<? super T> predicate) {
@@ -284,7 +284,7 @@ public class DynamicTestParams<T> {
      * @param function - метод преобразования из параметра в динамический тест. (Всегда не null)
      * @return стрим с тестами, построенными на переданных параметрах. (Всегда не null)
      * <p>
-     * Deprecated  Использовать {@link #testGroup} и {@link #form()}
+     * @deprecated  Использовать {@link #testGroup} и {@link #form()}
      */
     @Deprecated
     public Stream<DynamicTest> dynamicTests(Function<T, DynamicTest> function) {
@@ -428,12 +428,6 @@ public class DynamicTestParams<T> {
     }
 
     private static <T> Iterator<T> functionGeneratorIterator(Function<Integer, T> generator) {
-        return new FunctionGeneratorIterator<T>(generator);
+        return new FunctionGeneratorIterator<>(generator);
     }
-
-//    private static <T> Supplier<Iterable<T>> simpleSupplier(T t) {
-//        Objects.requireNonNull(t);
-//        return () -> (Iterable<T>) () -> new SingleValueIterator<T>(t);
-//    }
-
 }
